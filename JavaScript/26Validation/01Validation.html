@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Validation</h2>
+    <p>the act of confirming something as true or correct</p>
+    <ol>
+        <li>HTML Validation</li>
+        <li>Client Side Validation (JS)</li>
+        <li>Server Side Validation (prog lang)</li>
+    </ol>
+
+    <!-- <form action="" method="post">
+        <input type="text" name="inp" id="inp" required>
+        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <input type="text" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" />
+        <input type="submit" name="btn" id="btn" required>
+    </form> -->
+
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td><label for="UserName">UserName</label></td>
+                <td><input type="text"  onblur="checkreq(this,'UserNameError')" name="UserName" id="UserName"> <span id="UserNameError"></span> </td>
+            </tr>
+            <tr>
+                <td><label for="Password">Password</label></td>
+                <td><input type="password"  onblur="checkreq(this,'PasswordError')" name="Password" id="Password"> <span id="PasswordError"></span> </td>
+            </tr>
+            <tr>
+                <td><label for="Email">Email</label></td>
+                <td><input type="email"  onblur="checkreq(this,'EmailError')" name="Email" id="Email"> <span id="EmailError"></span> </td>
+            </tr>
+            <tr>
+                <td><label for="Mobile">Mobile</label></td>
+                <td><input type="tel"  onblur="checkreq(this,'MobileError')" name="Mobile" id="Mobile"> <span id="MobileError"></span> </td>
+            </tr>
+            <tr>
+                <td><label for="DateOfBirth">DateOfBirth</label></td>
+                <td><input type="date"  onblur="checkreq(this,'DOBError')" name="DateOfBirth" id="DateOfBirth"><span id="DOBError"></span> </td>
+            </tr>
+        </table>
+        <!-- <input type="text" onblur="checkreq()" name="username" id="username">
+        <span id="usernameError"></span> -->
+    </form>
+    <script>
+
+        // function checkreq() {
+        //     let uname = document.getElementById("username").value;
+        //     // console.log(uname);
+        //     if (uname == "") {
+        //         // document.getElementById("usernameError").innerText = "<b>This filed is required</b>";
+        //         document.getElementById("usernameError").innerHTML = "<b>This filed is required</b>";
+        //     } else {
+        //         document.getElementById("usernameError").innerText = "";
+        //     }
+        // }
+        // function checkreq(anything,spnId) {
+        //     // console.log("Called inside function this",this);
+        //     // console.log("Called inside function event",event);
+        //     // console.log("Called inside function anything param val ",anything);
+        //     // let uname = document.getElementById("username").value;
+        //     // let uname = anything.value;
+        //     // console.log(uname);
+        //     // // console.log(uname);
+        //     if (anything.value == "") {
+        //         // console.log("called inside if");
+        //         document.getElementById(spnId).innerHTML = "<b>This filed is required</b>";
+        //         // document.getElementById("usernameError").innerHTML = "<b>This filed is required</b>";
+        //     } else {
+        //         document.getElementById(spnId).innerHTML = "";
+        //         // console.log("called inside else");
+        //         // document.getElementById("usernameError").innerText = "";
+        //     }
+        // }
+        function checkreq(anything,spnId) {
+            (anything.value == "") ? document.getElementById(spnId).innerHTML = "<b>This filed is required</b>": document.getElementById(spnId).innerHTML = ""
+        }
+
+    </script>
+</body>
+
+</html>
